@@ -15,6 +15,8 @@
  */
 @interface MASConstraint : NSObject
 
+#pragma mark - --Constant--
+
 // Chaining Support
 
 /**
@@ -55,6 +57,8 @@
  */
 - (MASConstraint * (^)(NSValue *value))valueOffset;
 
+#pragma mark - --multiplier--
+
 /**
  *	Sets the NSLayoutConstraint multiplier property
  */
@@ -64,6 +68,14 @@
  *	Sets the NSLayoutConstraint multiplier to 1.0/dividedBy
  */
 - (MASConstraint * (^)(CGFloat divider))dividedBy;
+
+#pragma mark - --优先级--
+/**
+     priority: 可以设置任意的优先级，接受的参数是0-1000的数字
+     priorityLow: 设置低优先级，优先级为250
+     priorityMedium: 设置中优先级，优先级为500
+     priorityHigh: 设置高优先级，优先级为750
+ **/
 
 /**
  *	Sets the NSLayoutConstraint priority to a float or MASLayoutPriority
@@ -84,6 +96,8 @@
  *	Sets the NSLayoutConstraint priority to MASLayoutPriorityHigh
  */
 - (MASConstraint * (^)(void))priorityHigh;
+
+#pragma mark - --Relationship[==,<=,>=]--
 
 /**
  *	Sets the constraint relation to NSLayoutRelationEqual

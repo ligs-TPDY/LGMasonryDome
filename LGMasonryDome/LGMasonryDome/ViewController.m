@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "viewDome.h"
+#import "Masonry.h"
 @interface ViewController ()
 
 @end
@@ -17,9 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    self.view = [[viewDome alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+    UILabel *lable = [[UILabel alloc]init];
+    [self.view addSubview:lable];
+    [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+    }];
 }
+/**单词学习
+    Constraint:[kənˈstrānt]约束
+    Additions:[əˈdiSHəns]附加
+ 
+ 
+ 
+ */
 
 
 @end
