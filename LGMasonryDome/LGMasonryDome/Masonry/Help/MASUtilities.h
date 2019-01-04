@@ -73,6 +73,9 @@
  *  Given a scalar or struct value, wraps it in NSValue
  *  Based on EXPObjectify: https://github.com/specta/expecta
  */
+/**
+ *  inline关键字用来定义一个类的内联函数，引入它的主要原因是用它替代C中表达式形式的宏定义。
+ */
 static inline id _MASBoxValue(const char *type, ...) {
     va_list v;
     va_start(v, type);

@@ -20,14 +20,18 @@
     UILabel *lable = [[UILabel alloc]init];
     [self.view addSubview:lable];
     [lable mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.mas_equalTo(lable.superview.mas_left).offset(10);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
     }];
 }
 /**单词学习
     Constraint:[kənˈstrānt]约束
     Additions:[əˈdiSHəns]附加
- 
- 
+    Shorthand：[ˈSHôrtˌhand]速记
+    Exception:[ikˈsepSHən]例外
+    Install:[inˈstôl]安装
  
  */
 

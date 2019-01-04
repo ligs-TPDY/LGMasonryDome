@@ -58,6 +58,8 @@
 /**
  *	Notifies the delegate when the constraint needs to be replaced with another constraint. For example
  *  A MASViewConstraint may turn into a MASCompositeConstraint when an array is passed to one of the equality blocks
+     何时需要用另一个约束替换约束时通知委托。 例如
+     当数组传递给其中一个相等块时，MASViewConstraint可能会变成MASCompositeConstraint
  */
 - (void)constraint:(MASConstraint *)constraint shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint;
 

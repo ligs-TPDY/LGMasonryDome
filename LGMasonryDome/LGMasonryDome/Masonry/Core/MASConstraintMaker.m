@@ -49,24 +49,40 @@
 }
 
 #pragma mark - MASConstraintDelegate
-
-- (void)constraint:(MASConstraint *)constraint shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint {
+///
+- (void)constraint:(MASConstraint *)constraint
+    shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint
+{
+    ///获取下标
     NSUInteger index = [self.constraints indexOfObject:constraint];
+    ///断言：未找到constraint的下标
     NSAssert(index != NSNotFound, @"Could not find constraint %@", constraint);
+    ///将MASConstraint替换成MASCompositeConstraint，好好想想！！！
     [self.constraints replaceObjectAtIndex:index withObject:replacementConstraint];
 }
-
-- (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];
+///组装MASCompositeConstraint
+- (MASConstraint *)constraint:(MASConstraint *)constraint
+    addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute
+{
+    ///记录当前view添加的约束
+    MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view
+                                                             layoutAttribute:layoutAttribute];
+    
     MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];
+    
     if ([constraint isKindOfClass:MASViewConstraint.class]) {
         //replace with composite constraint
         NSArray *children = @[constraint, newConstraint];
+        
         MASCompositeConstraint *compositeConstraint = [[MASCompositeConstraint alloc] initWithChildren:children];
+        
         compositeConstraint.delegate = self;
+        
         [self constraint:constraint shouldBeReplacedWithConstraint:compositeConstraint];
+        
         return compositeConstraint;
     }
+    
     if (!constraint) {
         newConstraint.delegate = self;
         [self.constraints addObject:newConstraint];

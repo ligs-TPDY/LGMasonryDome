@@ -25,7 +25,7 @@
 #pragma mark - NSLayoutRelation proxies
 
 - (MASConstraint * (^)(id))equalTo {
-    return ^id(id attribute) {
+    return ^id(id attribute) {///第一个id是回调的返回值；第二个id是回调的参数。
         return self.equalToWithRelation(attribute, NSLayoutRelationEqual);
     };
 }

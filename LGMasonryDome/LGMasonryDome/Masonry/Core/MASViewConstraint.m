@@ -22,7 +22,7 @@
 @implementation MAS_VIEW (MASConstraints)
 
 static char kInstalledConstraintsKey;
-
+///利用Runtime给MASConstraints添加成员变量
 - (NSMutableSet *)mas_installedConstraints {
     NSMutableSet *constraints = objc_getAssociatedObject(self, &kInstalledConstraintsKey);
     if (!constraints) {
@@ -64,7 +64,7 @@ static char kInstalledConstraintsKey;
 }
 
 #pragma mark - NSCoping
-
+///自定义对象支持copy
 - (id)copyWithZone:(NSZone __unused *)zone {
     MASViewConstraint *constraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:self.firstViewAttribute];
     constraint.layoutConstant = self.layoutConstant;
@@ -76,7 +76,7 @@ static char kInstalledConstraintsKey;
 }
 
 #pragma mark - Public
-
+///当前view上的所有约束
 + (NSArray *)installedConstraintsForView:(MAS_VIEW *)view {
     return [view.mas_installedConstraints allObjects];
 }

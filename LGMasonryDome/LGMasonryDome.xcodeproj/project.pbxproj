@@ -17,6 +17,8 @@
 		A623A6E821D752B400380477 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A623A6D721D752B400380477 /* MASViewAttribute.m */; };
 		A623A6E921D752B400380477 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A623A6DB21D752B400380477 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		A623A6EA21D752B400380477 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A623A6DD21D752B400380477 /* ViewController+MASAdditions.m */; };
+		A650E9C021DF3CEB00DF37E3 /* MasonryHeader.xmind in Resources */ = {isa = PBXBuildFile; fileRef = A650E9BF21DF3CEB00DF37E3 /* MasonryHeader.xmind */; };
+		A650E9C321DF68B100DF37E3 /* 阅读源码理清思路文档.md in Resources */ = {isa = PBXBuildFile; fileRef = A650E9C221DF68B100DF37E3 /* 阅读源码理清思路文档.md */; };
 		A6AE254421D4C06300A7D4AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AE254321D4C06300A7D4AF /* AppDelegate.m */; };
 		A6AE254721D4C06300A7D4AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AE254621D4C06300A7D4AF /* ViewController.m */; };
 		A6AE254A21D4C06300A7D4AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AE254821D4C06300A7D4AF /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		A623A6DD21D752B400380477 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		A623A6DF21D752B400380477 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		A623A6E021D752B400380477 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A650E9BF21DF3CEB00DF37E3 /* MasonryHeader.xmind */ = {isa = PBXFileReference; lastKnownFileType = file; path = MasonryHeader.xmind; sourceTree = "<group>"; };
+		A650E9C221DF68B100DF37E3 /* 阅读源码理清思路文档.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "阅读源码理清思路文档.md"; sourceTree = "<group>"; };
 		A6AE253F21D4C06300A7D4AF /* LGMasonryDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGMasonryDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AE254221D4C06300A7D4AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6AE254321D4C06300A7D4AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 		A6AE254121D4C06300A7D4AF /* LGMasonryDome */ = {
 			isa = PBXGroup;
 			children = (
+				A650E9C221DF68B100DF37E3 /* 阅读源码理清思路文档.md */,
+				A650E9BF21DF3CEB00DF37E3 /* MasonryHeader.xmind */,
 				A6AE255821D4C0E200A7D4AF /* Masonry */,
 				A6AE254221D4C06300A7D4AF /* AppDelegate.h */,
 				A6AE254321D4C06300A7D4AF /* AppDelegate.m */,
@@ -239,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A650E9C021DF3CEB00DF37E3 /* MasonryHeader.xmind in Resources */,
 				A6AE257321D4C0E200A7D4AF /* Info.plist in Resources */,
+				A650E9C321DF68B100DF37E3 /* 阅读源码理清思路文档.md in Resources */,
 				A6AE254F21D4C06300A7D4AF /* LaunchScreen.storyboard in Resources */,
 				A6AE254C21D4C06300A7D4AF /* Assets.xcassets in Resources */,
 				A6AE254A21D4C06300A7D4AF /* Main.storyboard in Resources */,
