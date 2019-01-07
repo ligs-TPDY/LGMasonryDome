@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, MASAxisType) {
 
 /**
  *  distribute with fixed spacing
- *
+ *  以固定间距分布
  *  @param axisType     which axis to distribute items along
  *  @param fixedSpacing the spacing between each item
  *  @param leadSpacing  the spacing before the first item and the container
@@ -61,7 +61,7 @@ typedef NS_ENUM(NSUInteger, MASAxisType) {
 
 /**
  *  distribute with fixed item size
- *
+ *  以固定项目大小分发
  *  @param axisType        which axis to distribute items along
  *  @param fixedItemLength the fixed length of each item
  *  @param leadSpacing     the spacing before the first item and the container

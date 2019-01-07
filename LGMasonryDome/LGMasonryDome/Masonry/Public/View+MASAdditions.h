@@ -70,7 +70,7 @@
 
 /**
  *	Finds the closest common superview between this view and another view
- *
+ *  查找此视图与另一个视图之间最近的公共超级视图
  *	@param	view	other view
  *
  *	@return	returns nil if common superview could not be found
