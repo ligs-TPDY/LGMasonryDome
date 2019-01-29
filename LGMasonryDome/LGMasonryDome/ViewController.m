@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
+
 @interface ViewController ()
 
 @end
@@ -25,6 +26,9 @@
         make.top.mas_equalTo(0);
         make.bottom.mas_equalTo(0);
     }];
+    
+    NSAssert([self respondsToSelector:@selector(setMas_key:)],
+             @"Cannot attach mas_key to %@", self);
 }
 /**单词学习
     Constraint:[kənˈstrānt]约束
